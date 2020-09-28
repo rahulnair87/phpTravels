@@ -51,20 +51,23 @@ public class ExcelUtils {
 		int rownum = 0;
 		HashMap<String,String> dataMap;
 		
-		for(int i=1; i<=rowCount; i++){
+		for(int i=1; i <= rowCount; i++){
 			if(getCellData(i,0).toString().trim().equals(testCaseName)){
 				rownum = i;
 				break;
-			}else{
-				System.out.println("Data not available for this test case in input file. Please check and add");
-				System.exit(400);
-			}
+			}				
+		}
+		
+		if(!(rownum > 0)){
+			System.out.println("Data not available for this test case in input file. Please check and add");
+			System.exit(400);		
 		}
 			
 		dataMap = new HashMap<String,String>();	
-		for(int j =0; j<colCount; j++){			
+		
+		for(int j =0; j < colCount; j++){			
 			dataMap.put(getCellData(0,j).toString().trim(), getCellData(rownum,j).toString().trim());			
-			}
+		}
 		
 		return dataMap;
 	}
