@@ -15,7 +15,8 @@ import com.php.utils.GeneralUtils;
 import com.php.utils.Params;
 
 public class HomePage extends BaseTest {
-	
+
+	//element locators
 	By tabFlights = By.xpath("//div//li/a[@data-name='flights']");
 	By inputFrom = By.xpath("//div/label[(text()='From')]/..//a");
 	By selectFrom = By.xpath("//div[@id='select2-drop']//ul/li//span[text()='"+ Params.get("From") +"']");	
