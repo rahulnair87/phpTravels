@@ -56,6 +56,7 @@ public class HomePage extends BaseTest {
 	
 	public void setToLocation(){
 		driver.findElement(inputTo).click();
+		
 		WebDriverWait wait = new WebDriverWait(driver,10);
 		
 		driver.findElement(inputTo).sendKeys(Params.get("To"));

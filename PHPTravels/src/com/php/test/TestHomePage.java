@@ -37,7 +37,7 @@ public class TestHomePage extends BaseTest {
 		homePage.clickSearchButton();				
 	}
 	
-	@Test(priority=2)
+	@Test(priority=2, enabled = true)
 	public void Book2Children(){
 		homePage.clickOnFlightsTab();
 		homePage.setFromLocation();			
