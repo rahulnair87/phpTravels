@@ -1,3 +1,9 @@
 /bin/
 /test-output/
 /test-output/*
+/target/**
+*/target/classes/
+/target/
+*/target/**
+**/META-INF/
+!.mvn/wrapper/maven-wrapper.jar

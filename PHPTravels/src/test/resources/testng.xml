@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PHP Travels Test Suite">
+
+	<listeners>
+
+		<!-- listener class-name="com.qa.ExtentReport.Listener.ExtentReporterNG" 
+			/ -->
+		<!-- >listener class-name="com.qa.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.qa.listeners.TestListener"></listener /-->
+		
+	</listeners>
+
+	<test name="PHP Travels - Airline Booking Test">
+		<classes>
+			<class name="com.php.test.TestHomePage" />
+					</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->
