@@ -65,8 +65,9 @@ public class HomePage extends BaseTest {
 	
 	public void setNumberofAdults(){
 		String adults = Params.get("Adults");
+		driver.findElement(btnAdultMinus).click();
 		if(adults != ""){
-			for(int i =1; i< Integer.parseInt(adults) ; i++){ //i =1 because the adult count default is 1 on screen
+			for(int i =0; i< Integer.parseInt(adults) ; i++){ 
 				driver.findElement(btnAdutlsPlus).click();
 			}		
 		}
@@ -100,6 +101,7 @@ public class HomePage extends BaseTest {
 	
 	public void clickSearchButton(){
 		driver.findElement(btnSearch).click();
+		GeneralUtils.takeScreenshot();
 	}
 	
 	public void setDepartureDate(){
