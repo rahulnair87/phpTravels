@@ -63,5 +63,18 @@ public class GeneralUtils extends BaseTest {
 			e.printStackTrace();
 		}
 	}
+	
+	public static String removeLeadingZeroes(String str){
+		String strPattern = "^0+(?!$)";
+		str = str.replaceAll(strPattern, "");
+		return str;
+		
+	}
+	
+	public static void main(String args[]){
+		String num = "000094565000";
+		num = removeLeadingZeroes(num);
+		System.out.println("Formatted Number : " +num);
+	}
 
 }
