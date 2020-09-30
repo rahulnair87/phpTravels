@@ -37,7 +37,8 @@ public class ExcelUtils {
 		
 		try{
 			ExcelCell = ExcelSheet.getRow(row).getCell(col);
-			return ExcelCell.toString();			
+					
+			return ExcelCell.getStringCellValue().trim();			
 		}catch(Exception e){
 			return "";	
 		}
@@ -66,7 +67,7 @@ public class ExcelUtils {
 		dataMap = new HashMap<String,String>();	
 		
 		for(int j =0; j < colCount; j++){			
-			dataMap.put(getCellData(0,j).toString().trim(), getCellData(rownum,j).toString().trim());			
+			dataMap.put(getCellData(0,j), getCellData(rownum,j));			
 		}
 		
 		return dataMap;
